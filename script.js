@@ -97,10 +97,10 @@ document.addEventListener('DOMContentLoaded', function() {
 // INICIALIZAR EMAILJS
 // ===================================
 // IMPORTANTE: Reemplaza estos valores con los tuyos de EmailJS
-// Sigue las instrucciones al final de este archivo para configurar tu cuenta
+// EmailJS configurado para TATMANTATTO
 (function() {
     emailjs.init({
-        publicKey: "TU_PUBLIC_KEY_AQUI", // Reemplazar con tu Public Key
+        publicKey: "_4bJHeAQkdc0yfFLx",
     });
 })();
 
@@ -139,16 +139,16 @@ if (contactForm) {
 
         // Preparar datos para el email
         const templateParams = {
-            from_name: nombre,
-            from_email: email,
-            phone: telefono || 'No proporcionado',
-            service: servicio || 'No especificado',
-            message: mensaje,
-            to_email: 'tu_email@ejemplo.com' // Reemplazar con tu email
+            nombre: nombre,
+            email: email,
+            telefono: telefono || 'No proporcionado',
+            tamano: 'Ver mensaje',
+            estilo: servicio || 'No especificado',
+            mensaje: mensaje
         };
 
         // Enviar email automáticamente usando EmailJS
-        emailjs.send('TU_SERVICE_ID', 'TU_TEMPLATE_ID', templateParams)
+        emailjs.send('service_2l8609g', 'template_ilr7a6q', templateParams)
             .then(function(response) {
                 console.log('Email enviado exitosamente!', response.status, response.text);
 
